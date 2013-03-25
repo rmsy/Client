@@ -139,7 +139,12 @@
                                     <useTrueZipForUnpack>false</useTrueZipForUnpack>
                                     <preservePath>true</preservePath>
                                     <zipEntries>
-                                        <zipEntry>conf/**</zipEntry>
+                                        <zipEntry>conf/*.srg</zipEntry>
+                                        <zipEntry>conf/*.csv</zipEntry>
+                                        <zipEntry>conf/*.exc</zipEntry>
+                                        <zipEntry>conf/mcp.cfg</zipEntry>
+                                        <zipEntry>conf/version.cfg</zipEntry>
+                                        <zipEntry>conf/patches/**</zipEntry>
                                         <zipEntry>runtime/**</zipEntry>
                                     </zipEntries>
                                 </resource>

@@ -1,8 +1,6 @@
 package net.minecraft.src;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.src.*;
-
 import tc.oc.projectares.client.ProjectAres;
 
 public final class mod_ProjectAres extends BaseMod {
@@ -14,6 +12,7 @@ public final class mod_ProjectAres extends BaseMod {
                 return (mod_ProjectAres) mod;
             }
         }
+
         return null;
     }
 
@@ -41,7 +40,7 @@ public final class mod_ProjectAres extends BaseMod {
     public boolean onTickInGUI(float tick, Minecraft mc, GuiScreen screen) {
         this.pa.onTickInGUI(tick, mc, screen);
         return true;
-     }
+    }
 
     @Override
     public boolean onTickInGame(float tick, Minecraft mc) {
@@ -57,5 +56,10 @@ public final class mod_ProjectAres extends BaseMod {
     @Override
     public void clientDisconnect(NetClientHandler handler) {
         this.pa.onDisconnect(handler);
+    }
+
+    @Override
+    public void keyboardEvent(KeyBinding key) {
+        this.pa.keyboardEvent(key);
     }
 }
